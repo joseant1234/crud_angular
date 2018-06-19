@@ -1,0 +1,19 @@
+<h2>POSTS</h2>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Titulo</th>
+    <th>Description</th>
+    <th>Favorito</th>
+  </tr>
+  <tr *ngFor="let post of posts; let i = index">
+    <td>{{i}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.description}}</td>
+    <td>{{post.favorite}}</td>
+  </tr>
+</table>
+
+<a routerLink="/posts/new">Nuevo post</a>
+
+<button (click)="newPost()">NEW POST FROM COMPONENT</button>
